@@ -44,11 +44,15 @@ int main(int argc, char **argv) {
   size_t n = 0;
   char *line = NULL;
 
+  if (argc == 1) {
+    printf("Please provide number of values you wanna enter.\n");
+    return 1;
+  }
+
   printf("Input numbers\n");
 
   int numberCount = atoi(*(argv + 1));
   int *numbers = malloc(sizeof(int) * numberCount);
-
 
   for (int i = 0; i < numberCount; i++) {
     getline(&line, &n, stdin);
