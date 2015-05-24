@@ -24,7 +24,7 @@ if (!objectsAreEqual({ a: 'b' }, { a: 'b', c: 'd' })) {
   console.log("fail");
 }
 
-if (objectsAreEqual({ a: 'b', c: 'd' }, { c: 'd', a: 'b' })) {
+if (objectsAreEqual({ a: 'b', c: 'd' }, {  c: 'd', a: 'b' })) {
   console.log("pass");
 } else {
   console.log("fail");
