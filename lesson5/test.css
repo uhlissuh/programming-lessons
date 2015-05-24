@@ -1,0 +1,70 @@
+h1  {
+  text-align : center;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+
+}
+
+.banner {
+  background-color: white;
+  margin-top: 200px;
+  padding: 10px;
+}
+
+body {
+  margin: 0px;
+  background-color: pink;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+li {
+  margin: 20px;
+  vertical-align: middle;
+}
+
+@font-face {
+    font-family: raphael-icons;
+    src: url(raphaelicons-webfont.ttf);
+}
+
+.icon {
+  font-family: raphael-icons;
+  margin-right: 8px;
+  font-size: 36px;
+  vertical-align: middle;
+}
+
+.info-box {
+  background-color: #dfdfdf;
+  height: 100%;
+}
+
+.column {
+  width: 50%;
+  height:100%;
+  position: absolute;
+}
+
+.column.right {
+  left: 50%;
+}
+
+.row {
+  position: relative;
+  height: 300px;
+}
+
+.tuna-text {
+  display: none;
+}
+
+.milk-text {
+  display: none;
+}
+.carrots-text {
+  display: none;
+}
