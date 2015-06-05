@@ -2,6 +2,7 @@ var render = require("./views");
 var http = require("http");
 var fs = require("fs");
 var models = require("./models");
+var regex = /people\/(\d)/
 
 
 var server = http.createServer(function(req, res) {
@@ -12,10 +13,11 @@ var server = http.createServer(function(req, res) {
       models.createPerson(parseFormData(data.toString()));
       res.end();
     })
-
-  } else if (req.url === "/main.css") {
-    res.end(fs.readFileSync("./main.css", "utf8"));
-
+  } else if (req.url.indexOf("/static") === 0) {
+    res.end(fs.readFileSync("." + req.url, "utf8"));
+  } else if (req.url.indexOf("people" === 0) && req.method === "DELETE") {
+    models.deletePerson(regex.exec(req.url)[1]);
+    res.end("");
   } else {
     res.writeHead(200, {'Content-Type': 'text/html'});
     var babiesString = "";
